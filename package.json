@@ -1,0 +1,28 @@
+{
+  "name": "ultratrader-api",
+  "version": "1.0.0",
+  "description": "UltraTrader Bot — Signal publishing API with MT5 browser automation",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --enable-source-maps dist/index.js",
+    "dev": "tsc && node --enable-source-maps dist/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.0.0",
+    "mongoose": "^9.4.1",
+    "pino": "^9.0.0",
+    "pino-http": "^10.0.0",
+    "puppeteer": "^24.0.0",
+    "xmlhttprequest-ssl": "^4.0.0",
+    "zod": "^3.22.4",
+    "yahoo-finance2": "^2.11.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.4.0"
+  }
+}
