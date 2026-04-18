@@ -11,7 +11,7 @@ import app from "./app.js";
 
   // Ping self every 14 minutes so Render never puts the server to sleep
   function startSelfPing() {
-    const PING_INTERVAL = 14 * 60 * 1000; // 14 minutes
+    const PING_INTERVAL = 5 * 60 * 1000; // 5 minutes
     setInterval(async () => {
       try {
         const res = await fetch(`${SELF_URL}/`);
@@ -20,7 +20,7 @@ import app from "./app.js";
         logger.warn({ err }, "Self-ping failed");
       }
     }, PING_INTERVAL);
-    logger.info({ url: SELF_URL, intervalMin: 14 }, "Self-ping started — server will stay awake");
+    logger.info({ url: SELF_URL, intervalMin: 5 }, "Self-ping started — server will stay awake");
   }
 
   async function autoReconnect() {
