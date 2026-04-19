@@ -68,12 +68,10 @@ async function _launchAndLogin(mt5Login: string, mt5Password: string, mt5Server:
   }
 
   // Chrome was installed here during build — this dir persists on Render
-    const CHROME_CACHE = process.env.PUPPETEER_CACHE_DIR ?? "/opt/render/project/src/.puppeteer-cache";
-    process.env.PUPPETEER_CACHE_DIR = CHROME_CACHE;
+    process.env.PUPPETEER_CACHE_DIR = process.env.PUPPETEER_CACHE_DIR ?? "/opt/render/project/src/.puppeteer-cache";
 
     browserInstance = await puppeteer.launch({
       headless: true,
-      cacheDir: CHROME_CACHE,
       args: [
         "--no-sandbox",
         "--disable-setuid-sandbox",
