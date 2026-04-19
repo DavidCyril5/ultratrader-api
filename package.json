@@ -4,7 +4,7 @@
   "description": "UltraTrader Bot — Signal publishing API with MT5 browser automation",
   "type": "module",
   "scripts": {
-    "build": "npx puppeteer browsers install chrome && tsc",
+    "build": "PUPPETEER_CACHE_DIR=/opt/render/project/src/.puppeteer-cache npx puppeteer browsers install chrome && tsc",
     "start": "node --enable-source-maps dist/index.js",
     "dev": "tsc && node --enable-source-maps dist/index.js"
   },
