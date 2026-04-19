@@ -10,7 +10,7 @@ import { logger } from "./logger.js";
 import { AccountConnection } from "@workspace/db";
 
 // Python bridge — runs on VPS alongside MT5 terminal in Wine
-const PYTHON_BRIDGE_URL = process.env.MT5_BRIDGE_URL ?? "http://localhost:5000";
+const PYTHON_BRIDGE_URL = process.env.MT5_BRIDGE_URL ?? "http://localhost:5001";
 let pythonBridgeReady = false;
 
 async function checkPythonBridge(): Promise<boolean> {
